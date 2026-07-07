@@ -411,7 +411,7 @@ terraform -chdir=terraform destroy
 >
 > ```bash
 > # バケットを ACTIVE に戻す
-> gcloud logging buckets undelete gakusyoku_app-logs --location=global --project=<project>
+> gcloud logging buckets undelete gakusyoku-app-logs --location=global --project=<project>
 >
 > # apply 失敗で taint されている場合は解除する（taint のままだと削除→再作成が走り、同じエラーになる）
 > terraform -chdir=terraform untaint google_logging_project_bucket_config.app
