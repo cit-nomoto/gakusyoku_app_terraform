@@ -1,0 +1,33 @@
+#ai
+.github
+.claude
+# Terraform state (may contain sensitive data)
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate
+*.tfstate.*
+
+# Terraform provider plugins & lock file
+.terraform/
+.terraform.lock.hcl
+
+# Sensitive variable files
+*.tfvars
+*.tfvars.json
+
+# Override files (local overrides, not for sharing)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash log
+crash.log
+crash.*.log
+
+# Plan files (may contain sensitive data)
+*.tfplan
+
+# CLI configuration
+.terraformrc
+terraform.rc

@@ -1,0 +1,16 @@
+# Cloud Build にアップロードするビルドコンテキストから除外するもの。
+# 必要なのは docker/ と gakusyoku_app/ のみ。
+.git/
+.gitignore
+.gcloudignore
+
+# Terraform 一式（プロバイダのバイナリ等が巨大なので必ず除外）
+terraform/
+
+# 生成物・スクリプト・調査用ファイル
+*.zip
+__pycache__/
+*.pyc
+scripts/
+README.md
+LICENSE

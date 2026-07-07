@@ -1,0 +1,7 @@
+dbs:
+  - path: /app/instance/app.db # データベースファイルのローカルパス
+    # レプリケート先
+    replicas:
+      - type: gcs # レプリケート先のタイプ
+        bucket: ${REPLICA_BUCKET} # バケット名（Cloud Run の環境変数で指定）
+        path: app.db # レプリケート先のパス

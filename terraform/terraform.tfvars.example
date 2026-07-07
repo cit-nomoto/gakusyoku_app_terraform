@@ -1,0 +1,26 @@
+# このファイルを terraform.tfvars にコピーして、環境固有の値を設定してください。
+#   cp terraform.tfvars.example terraform.tfvars
+# terraform.tfvars は .gitignore 対象なのでコミットされません。
+
+# GCP プロジェクト ID（必須）
+project_id = "your-gcp-project-id"
+
+# デプロイリージョン（省略時: asia-northeast1）
+# region = "asia-northeast1"
+
+# アプリケーション名（省略時: gakusyoku-app）
+# app_name = "gakusyoku-app"
+
+# 学生のグループ定義（グループ名 => メールアドレスのリスト）
+# グループごとに GCS バケット・Cloud Run・Cloud Build 等の資源一式が作成され、
+# 各学生は自分のグループの資源にのみアクセスできる。
+# グループ名は小文字英数字とハイフンで 12 文字以内。
+groups = {
+  team-a = [
+    "student1@example.com",
+  ]
+  team-b = [
+    "student2@example.com",
+    "student3@example.com",
+  ]
+}
