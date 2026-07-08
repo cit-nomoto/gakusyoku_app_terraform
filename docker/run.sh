@@ -23,5 +23,8 @@ if [ -f /tmp/restored.db ]; then
 fi
 
 # Google Cloud Storage にデータベースファイルをレプリケートしながら Gunicorn でアプリを起動する
+# アプリは main.py の create_app() ファクトリから生成する（gunicorn のファクトリ構文）。
+# litestream の -exec は簡易シェルパーサで分割されるため、裸の () はパースエラーになる。
+# シングルクォートで包んで 1 トークンとして渡すこと。
 litestream replicate -config /etc/litestream.yml \
-  -exec "gunicorn --bind 0.0.0.0:8080 --workers 1 main:create_app"
+  -exec "gunicorn --bind 0.0.0.0:8080 --workers 1 'main:create_app()'"
