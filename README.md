@@ -1,3 +1,6 @@
+# 賢い子へ
+数日でいきなり作ったからほぼAI駆動なんだわ！コード汚くてごめんな！
+
 # 設計書
 
 ソースコードレポジトリ:[`gakusyoku_app`](https://github.com/cit-nomoto/gakusyoku_app)
